@@ -41,7 +41,7 @@ jobs:
         working-directory: terraform
         run: |
           echo "S3_BUCKET_NAME=$(terraform output -raw s3_bucket_name 2>/dev/null)" >> $GITHUB_ENV
-          echo "CLOUDFRONT_DISTRIBUTION_ID=$(terraform output -raw cloudfront_distribution_id 2>/dev/null)" >>
+          echo "CLOUDFRONT_DISTRIBUTION_ID=$(terraform output -raw cloudfront_distribution_id 2>/dev/null)" >> $GITHUB_ENV
 
       # ---------------- Node / Vite Steps ----------------
       - name: Setup Node.js
